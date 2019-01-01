@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="95059c5f-5f34-43f0-a99d-c7634ae1d45e" name="lu_weixin" url="http://47.75.103.19">
+        <fileTransfer host="47.75.103.19" port="22" rootFolder="/www/wwwroot/wx.tiantongjue.top/" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
