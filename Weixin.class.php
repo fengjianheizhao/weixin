@@ -62,25 +62,7 @@ class Weixin
 
         $FuncFlag = $this->setFlag ? 1 : 0;
 
-        $textTpl = "<xml>
-
-            <ToUserName><![CDATA[{$this->msg['FromUserName']}]]></ToUserName>
-
-            <FromUserName><![CDATA[{$this->msg['ToUserName']}]]></FromUserName>
-
-            <CreateTime>{$CreateTime}</CreateTime>
-
-            <MsgType><![CDATA
-
-            1  
-
-            ]></MsgType>
-
-            <Content><![CDATA[%s]]></Content>
-
-            <FuncFlag>%s</FuncFlag>
-
-            </xml>";
+        $textTpl = "<xml><ToUserName><![CDATA[{$this->msg['FromUserName']}]]></ToUserName><FromUserName><![CDATA[{$this->msg['ToUserName']}]]></FromUserName><CreateTime>{$CreateTime}</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[nihao]]></Content><FuncFlag>%s</FuncFlag></xml>";
 
         return sprintf($textTpl,$text,$FuncFlag);
 

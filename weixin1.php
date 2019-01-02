@@ -4,15 +4,18 @@
 
 header("Content-type: text/html; charset=utf-8");
 $nonce = $_GET['nonce'];
-$token = 'winxin';
+$token = 'luchenzhi';
 $timestamp = $_GET['timestamp'];
 if (isset($_GET['echostr'])) {
     if (bindServerCheck()) {
         echo $_GET['echostr'];
     }
-    exit();
+
+}else{
+    //echo'111';
+    responseMsg();
 }
-responseMsg();
+
 
 
 //消息回复
@@ -166,7 +169,7 @@ function responseMsg() {
 				  </xml>";
             $msgType = "music";
 
-            $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time);
+            $resultStr = sprintf($textTpl, $fromUser, $toUser, $time);
             echo $resultStr;
 
 
@@ -267,7 +270,7 @@ function is_utf8($str)
     return preg_match('//u', $str);
 }
 
-function music($url,$tetle,$des) {
+function music($url, $tetle, $des, $toUser) {
     $MusicUrl=$url;
     $tetle=$tetle;
     $des=$des;
@@ -286,6 +289,6 @@ function music($url,$tetle,$des) {
                              </xml>";
     $msgType = "music";
 
-    $resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
+    $resultStr = sprintf($textTpl, $fromUser, $toUser, $time, $msgType, $contentStr);
     echo $resultStr;
 }
